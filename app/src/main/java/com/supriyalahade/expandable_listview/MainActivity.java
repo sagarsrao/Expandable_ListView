@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         expListView.setAdapter(expandListAdapter);
 
-
+        expandListAdapter.notifyDataSetChanged();
 
     }
 
@@ -151,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
 
         Travel.add(d);
         Travel.add(d1);//child 1
+      //  expandListAdapter.notifyDataSetChanged();
 
 
 
@@ -161,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
         Data_Details d3 = new Data_Details(date,item_name,cost);
         Fuel.add(d2);
         Fuel.add(d3);//child 2
+      //  expandListAdapter.notifyDataSetChanged();
 
 
 
@@ -168,13 +170,12 @@ public class MainActivity extends AppCompatActivity {
 
         Data_Details d4 = new Data_Details(date,item_name,cost);
         Restaurant.add(d4);//child 03
+        //expandListAdapter.notifyDataSetChanged();
 
 
         listDataChild.put(listDataHeader.get(0), Travel);
         listDataChild.put(listDataHeader.get(1), Fuel);
         listDataChild.put(listDataHeader.get(2), Restaurant);
-
-        //expandListAdapter.notifyDataSetChanged();
 
 
 
